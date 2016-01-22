@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+Usando AngularJS, desarrollar una calculadora que introduzcas tu sexo, edad y medida y te calcule tu peso ideal.
+<div ng-app="">
+    <form>
+        <p>Age: <input type="number" ng-model="age" min="0" placeholder="Age"></p>
+        <p>height: <input type="number" ng-model="height" min="100" placeholder="Height"  required> cm</p>
+        <p>sex: <input type="radio" ng-model="gender" value="male">Male
+                <input type="radio" ng-model="gender" value="female">Female
+        </p>
+    </form>
+
+    <span ng-if="height">
+        <p ng-if="gender === 'male' ">
+            Your ideal weight is {{ 50 + (.91 * ( height - 152.4 )) }} {{gender}}
+        </p>
+
+        <p ng-if="gender === 'female' ">
+            Your ideal weight is {{ 45.5 + (.91 * ( height - 152.4 )) }} {{gender}}
+        </p>
+    </span>
+
+
+</div>
+
+</body>
+</html>
