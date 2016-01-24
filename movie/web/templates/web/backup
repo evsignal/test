@@ -1,0 +1,10 @@
+{% if movie.actors %}
+        <ul>
+            {% for actor in movie.actors %}
+                <!--<li><a href="{g% url 'live:detail' article.id %}">{{ article.title }} </a></li> -->
+                <li><a href="{% url 'detail' m.id %}"> {{ actor }}</a> </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There's not actor registered yet</p>
+    {% endif %}
