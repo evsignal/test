@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>{{movie.title}}</h1>
+
+<h3>{{movie.review}}</h3>
+
+
+{% if movie.actors.all %}
+    List of Actors
+    <ul>
+    {% for actor in  movie.actors.all %}
+        <li><a href="{% url 'actor_detail' actor.id %}">{{actor.name}}</a></li>
+        {% endfor %}
+     </ul>
+{% else %}
+            <p>There's no actors added yet</p>
+{% endif %}
+
+
+
+
+
+</body>
+</html>
+
