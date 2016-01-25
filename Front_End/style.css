@@ -1,0 +1,61 @@
+article, aside {
+    display: inline-block;
+}
+
+body {
+    background: white;
+    padding-leftt: 1%;
+    padding-right: 1%;
+}
+
+
+
+header h1{
+    background: black;
+    padding: 55px 30px;
+    text-align: left;
+    color: #cccc00;
+}
+
+
+#menu{
+    background: #00cc66;
+    padding: 5px ;
+}
+
+#menu li {
+    display: inline-block;
+    list-style: none;
+    padding-left: 15%;
+}
+
+div header {
+    color: red;
+    background: white;
+    padding: 10%;
+}
+
+article.relative {
+    position: relative;
+    top: -50px;
+    
+}
+
+article p{
+
+}
+
+aside{
+    padding: 10px 30px;
+}
+
+
+.img-circle {
+    border-radius: 50%;
+    width:154px;
+    height:142px;
+}
+
+div.chat {
+    text-align: right;
+}
